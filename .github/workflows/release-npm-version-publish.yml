@@ -1,0 +1,23 @@
+name: Create release
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: npm ci
+      - run: npm test
+
+      - name: NPM version release
+        uses: ScientaNL/release-npm-github-action@1.2.1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          npm-token: "${{ secrets.NPM_SCIENTA_TOKEN }}"
+          repository-owner: "ScientaNL"
+          npm-options: "{tag: 'latest', access: 'public'}"
