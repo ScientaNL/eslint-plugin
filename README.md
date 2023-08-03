@@ -1,7 +1,7 @@
 # @scienta/eslint-plugin
 
-![npm](https://img.shields.io/npm/v/%40scienta%2Feslint-plugin)
-![npm](https://img.shields.io/npm/dy/%40scienta%2Feslint-plugin)
+[![npm](https://img.shields.io/npm/v/@scienta/eslint-plugin)](https://www.npmjs.com/package/@scienta/eslint-plugin)
+[![npm](https://img.shields.io/npm/dy/@scienta/eslint-plugin)](https://www.npmjs.com/package/@scienta/eslint-plugin)
 
 
 
