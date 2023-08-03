@@ -1,7 +1,7 @@
 {
 	"name": "@scienta/eslint-plugin",
 	"description": "A set of common ESLint rules used across Scienta projects",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
