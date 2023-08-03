@@ -11,10 +11,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18"
-      - run: npm ci
-      - run: npm test
 
-      - name: NPM version release
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      - name: Release
         uses: ScientaNL/release-npm-github-action@1.2.1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"

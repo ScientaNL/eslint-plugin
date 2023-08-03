@@ -15,7 +15,6 @@
 		"package.json"
 	],
 	"scripts": {
-		"postinstall": "npm run build",
 		"build": "tsc -b tsconfig.build.json",
 		"lint": "eslint",
 		"test": "jest"
