@@ -43,13 +43,24 @@ With this rule you can maintain a unified order of properties inside the **Angul
 - exportAs
 - templateUrl
 - template
+- styleUrl
 - styleUrls
 - styles
+- host
+- hostDirectives
 - animations
+- encapsulation
 - changeDetection
+- preserveWhitespaces
 - standalone
+- jit
+- inputs
+- outputs
 - imports
 - providers
+- viewProviders
+- queries
+- schemas
 
 #### Examples
 
@@ -89,7 +100,12 @@ Unifies the order of the props in `@NgModule(props)`.
 
 With this rule you can maintain a unified order of properties inside the **Angular** `@NgModule` decorator. The properties are ranked in the following order:
 
+- id
+- jit
+- bootstrap
 - imports
+- providers
+- schemas
 - declarations
 - exports
 
