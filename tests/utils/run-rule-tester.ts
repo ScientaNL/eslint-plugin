@@ -1,14 +1,18 @@
-import { TSESLint } from '@typescript-eslint/utils';
+import { RuleTester } from '@typescript-eslint/rule-tester';
+import tsParser from "@typescript-eslint/parser"
+import { RuleModule } from '@typescript-eslint/utils/ts-eslint';
 
 export function runRuleTester<TMessageIds extends string, TOptions extends Readonly<unknown[]> = unknown[]>(props: {
 	ruleName: string,
 	messageId: TMessageIds,
-	rule: TSESLint.RuleModule<TMessageIds, TOptions>,
+	rule: RuleModule<TMessageIds, TOptions>,
 	validStatements: string[],
 	invalidStatements: string[],
 }): void {
-	(new TSESLint.RuleTester({
-		parser: require.resolve('@typescript-eslint/parser'),
+	(new RuleTester({
+		languageOptions: {
+			parser: tsParser,
+		},
 	})).run(props.ruleName, props.rule, {
 		valid: props.validStatements.map((validStatement, idx) => ({
 			name: `statement #${idx + 1}`,

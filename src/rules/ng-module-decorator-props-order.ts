@@ -23,7 +23,6 @@ export default createEslintRule<[], typeof messageId>({
 		fixable: 'code',
 		docs: {
 			description: 'Unifies the order of the props in @NgModule(props)',
-			recommended: 'recommended',
 		},
 		schema: [],
 		messages: {

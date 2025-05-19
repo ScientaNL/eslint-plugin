@@ -37,7 +37,6 @@ export default createEslintRule<[], typeof messageId>({
 		fixable: 'code',
 		docs: {
 			description: 'Unifies the order of the props in @Component(props)',
-			recommended: 'recommended',
 		},
 		schema: [],
 		messages: {
