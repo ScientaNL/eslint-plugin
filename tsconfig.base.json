@@ -7,7 +7,7 @@
 		"declaration": true,
 		"declarationMap": true,
 		"esModuleInterop": true,
-		"module": "commonjs",
+		"module": "CommonJS",
 		"noImplicitReturns": true,
 		"pretty": true,
 		"skipLibCheck": true,
